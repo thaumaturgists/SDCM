@@ -5,8 +5,8 @@
             #keyboardEnabled; // Private field for keyboardEnabled
 
             constructor() {
-                this.#mouseEnabled = true; // Always enabled
-                this.#keyboardEnabled = true; // Always enabled
+                this.#mouseEnabled = false; // not enabled
+                this.#keyboardEnabled = false; // not enabled
                 this.init();
             }
 
