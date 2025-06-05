@@ -1,0 +1,82 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+    <script>
+        class TextSelectionPreventer {
+            #mouseEnabled; // Private field for mouseEnabled
+            #keyboardEnabled; // Private field for keyboardEnabled
+
+            constructor() {
+                this.#mouseEnabled = true; // Always enabled
+                this.#keyboardEnabled = true; // Always enabled
+                this.init();
+            }
+
+            // Method to initialize event listeners
+            init() {
+                // Add event listeners to the SVG element
+                this.addEventListeners(document.documentElement);
+            }
+
+            // Method to add event listeners
+            addEventListeners(element) {
+                element.addEventListener('selectstart', this.#disableTextSelection.bind(this));
+                element.addEventListener('mousedown', this.#disableTextSelection.bind(this));
+                element.addEventListener('keydown', this.#preventTextSelection.bind(this));
+                element.addEventListener('keydown', this.#preventFindInPage.bind(this)); // Prevent find in page
+            }
+
+            // Method to prevent text selection on selectstart and mousedown events
+            #disableTextSelection(event) {
+                if (this.#mouseEnabled) {
+                    event.preventDefault();
+                }
+            }
+
+            // Method to prevent text selection using keyboard
+            #preventTextSelection(event) {
+                if (this.#keyboardEnabled && event.shiftKey && this.#isNavigationKey(event.key)) {
+                    event.preventDefault();
+                }
+            }
+
+            // Method to prevent all key presses
+            #preventFindInPage(event) {
+                event.preventDefault(); // Prevent all key presses
+            }
+
+            // Type check for boolean values
+            #isBoolean(value) {
+                return typeof value === 'boolean';
+            }
+
+            // Check if the key is a navigation key
+            #isNavigationKey(key) {
+                return ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(key);
+            }
+
+            // Public method to set mouseEnabled with type check
+            setMouseEnabled(value) {
+                if (this.#isBoolean(value)) {
+                    this.#mouseEnabled = value;
+                } else {
+                    console.error('Invalid value: mouseEnabled must be a boolean.');
+                }
+            }
+
+            // Public method to set keyboardEnabled with type check
+            setKeyboardEnabled(value) {
+                if (this.#isBoolean(value)) {
+                    this.#keyboardEnabled = value;
+                } else {
+                    console.error('Invalid value: keyboardEnabled must be a boolean.');
+                }
+            }
+        }
+
+        // Instantiate the TextSelectionPreventer class to activate the functionality
+        const textSelectionPreventer = new TextSelectionPreventer();
+    </script>
+
+    <!-- Example SVG content -->
+    <rect x="10" y="10" width="480" height="480" fill="lightblue" />
+    <text x="50" y="50" font-family="Arial" font-size="24" fill="black">Prevent Text Selection</text>
+</svg>
