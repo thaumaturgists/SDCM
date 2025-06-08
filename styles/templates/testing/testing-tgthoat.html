@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Greatest Testing HTML of All Time</title>
+    <script defer src="test.js"></script>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Headings */
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        /* Links */
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Grid layout */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .item {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Flexbox layout */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .flex-item {
+            background-color: #e7e7e7;
+            padding: 10px;
+            margin: 5px;
+            flex: 1;
+        }
+
+        /* Media queries */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .flex-container {
+                flex-direction: column;
+            }
+        }
+
+        /* Color Testing Styles */
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .color-box {
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Color Classes */
+        .primary-red { background-color: #e74c3c; }
+        .primary-green { background-color: #2ecc71; }
+        .primary-blue { background-color: #3498db; }
+        .primary-yellow { background-color: #f1c40f; }
+        .primary-purple { background-color: #9b59b6; }
+        .secondary-orange { background-color: #e67e22; }
+        .secondary-teal { background-color: #1abc9c; }
+        .secondary-pink { background-color: #ff69b4; }
+        .secondary-brown { background-color: #8e44ad; }
+        .secondary-gray { background-color: #95a5a6; }
+
+        /* Footer styles */
+        footer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        footer a {
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="link1">This is a Test H1</h1>
+    <h2>This is a Test H2</h2>
+    <h3>This is a Test H3</h3>
+    <h4>This is a Test H4</h4>
+    <h5>This is a Test H5</h5>
+    <h6>This is a Test H6</h6>
+
+    <p>This is a test paragraph 1. It serves to demonstrate the structure and styling of the document.</p>
+    <p>This is a test paragraph 2. The goal is to create a visually appealing and functional layout.</p>
+    <p>This is a test paragraph 3. Each section showcases different HTML elements and styles.</p>
+    <p>This is a test paragraph 4. The content is designed to be informative and engaging.</p>
+    <p>This is a test paragraph 5! Feel free to explore the various features included in this document.</p>
+
+    <div class="container">
+        <div class="item">
+            <h3>Item 1</h3>
+            <p>Details about item 1. This item showcases the use of grid layout.</p>
+            <button class="button">Learn More</button>
+        </div>
+        <div class="item">
+            <h3>Item 2</h3>
+            <p>Details about item 2. This item highlights the flexibility of the design.</p>
+            <button class="button">Learn More</button>
+        </div>
+        <div class="item">
+            <h3>Item 3</h3>
+            <p>Details about item 3. This item demonstrates the use of buttons and interactivity.</p>
+            <button class="button">Learn More</button>
+        </div>
+    </div>
+
+    <h1 id="link2">Color Testing Section</h1>
+    <div class="color-palette">
+        <div class="color-box primary-red">Red</div>
+        <div class="color-box primary-green">Green</div>
+        <div class="color-box primary-blue">Blue</div>
+        <div class="color-box primary-yellow">Yellow</div>
+        <div class="color-box primary-purple">Purple</div>
+        <div class="color-box secondary-orange">Orange</div>
+        <div class="color-box secondary-teal">Teal</div>
+        <div class="color-box secondary-pink">Pink</div>
+        <div class="color-box secondary-brown">Brown</div>
+        <div class="color-box secondary-gray">Gray</div>
+    </div>
+
+    <footer>
+        <h2>Footer Section</h2>
+        <ul>
+            <li>Footer link: <a href="#link1">Go to H1</a></li>
+            <li>&copy; 2025 Testest. All rights reserved.</li>
+        </ul>
+    </footer>
+</body>
+</html>
