@@ -1,0 +1,101 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+/* Grid layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Flexbox layout */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.flex-item {
+    background-color: #e7e7e7;
+    padding: 10px;
+    margin: 5px;
+    flex: 1;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+/* # Basic CSS template you can use for testing */
+/* # When testing CSS, it's helpful to have a simple yet comprehensive stylesheet that covers various properties and selectors. */
+
+/* ### Explanation of the CSS:
+
+1. **Reset Styles**: Resets margins and paddings to ensure consistency across browsers.
+2. **Body Styles**: Sets a default font, background color, and text color.
+3. **Headings**: Provides spacing for headings.
+4. **Links**: Styles for links, including hover effects.
+5. **Buttons**: Basic button styles with hover effects.
+6. **Grid Layout**: A simple grid layout for testing grid properties.
+7. **Flexbox Layout**: A flexbox layout for testing flex properties.
+8. **Media Queries**: Responsive design adjustments for smaller screens.
+
+You can use this CSS in conjunction with HTML elements to test various styles and layouts effectively. */
