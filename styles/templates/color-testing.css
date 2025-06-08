@@ -1,0 +1,136 @@
+/* Color Testing Styles */
+
+/* Color Palette */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Color Boxes */
+.color-box {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Primary Colors */
+.primary-red {
+    background-color: #e74c3c; /* Red */
+}
+
+.primary-green {
+    background-color: #2ecc71; /* Green */
+}
+
+.primary-blue {
+    background-color: #3498db; /* Blue */
+}
+
+.primary-yellow {
+    background-color: #f1c40f; /* Yellow */
+}
+
+.primary-purple {
+    background-color: #9b59b6; /* Purple */
+}
+
+/* Secondary Colors */
+.secondary-orange {
+    background-color: #e67e22; /* Orange */
+}
+
+.secondary-teal {
+    background-color: #1abc9c; /* Teal */
+}
+
+.secondary-pink {
+    background-color: #ff69b4; /* Pink */
+}
+
+.secondary-brown {
+    background-color: #8e44ad; /* Brown */
+}
+
+.secondary-gray {
+    background-color: #95a5a6; /* Gray */
+}
+
+/* Text Colors */
+.text-color {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Example Text Color Classes */
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-light-gray {
+    color: #ecf0f1; /* Light Gray */
+}
+
+.text-dark-gray {
+    color: #34495e; /* Dark Gray */
+}
+
+/* Background Colors */
+.bg-light {
+    background-color: #ecf0f1; /* Light Background */
+}
+
+.bg-dark {
+    background-color: #34495e; /* Dark Background */
+}
+
+/* Example Usage */
+.example {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+/* CSS stylesheet specifically designed for testing colors. This stylesheet complements the previous one and includes various color properties, backgrounds, and text colors to help you visualize how different colors work together. */
+
+/* ### Explanation of the Color Testing CSS:
+
+1. **Color Palette**: A grid layout to display different color boxes.
+2. **Color Boxes**: Each color box has a fixed height and centers its text.
+3. **Primary Colors**: Classes for primary colors (red, green, blue, yellow, purple) with corresponding background colors.
+4. **Secondary Colors**: Classes for secondary colors (orange, teal, pink, brown, gray).
+5. **Text Colors**: Classes for different text colors to test visibility against various backgrounds.
+6. **Background Colors**: Classes for light and dark background colors.
+7. **Example Usage**: A class for general styling of example elements.
+
+### How to Use:
+
+You can create an HTML structure that utilizes these classes to visualize the colors. For example:
+
+```html
+<div class="color-palette">
+    <div class="color-box primary-red">Red</div>
+    <div class="color-box primary-green">Green</div>
+    <div class="color-box primary-blue">Blue</div>
+    <div class="color-box primary-yellow">Yellow</div>
+    <div class="color-box primary-purple">Purple</div>
+    <div class="color-box secondary-orange">Orange</div>
+    <div class="color-box secondary-teal">Teal</div>
+    <div class="color-box secondary-pink">Pink</div>
+    <div class="color-box secondary-brown">Brown</div>
+    <div class="color-box secondary-gray">Gray</div>
+</div>
+```
+
+This setup will allow you to test and visualize how different colors interact with each other and with text. */
